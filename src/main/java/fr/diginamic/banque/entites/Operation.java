@@ -6,10 +6,17 @@ public abstract class Operation {
 	protected double montant;
 	
 	public Operation(Date dateOperation, double montant) {
+		super();
 		this.dateOperation = dateOperation;
 		this.montant = montant;
 	}
 	
+	public abstract String getType();
+	@Override
+	public String toString() {
+		return "dateOperation=" + dateOperation + ", montant=" + montant + "type="+getType();
+	}
+
 
 	public Date getDateOperation() {
 		return dateOperation;
@@ -21,8 +28,5 @@ public abstract class Operation {
 	}
 	
 
-	public abstract String getType();
 	
-
-
 }
