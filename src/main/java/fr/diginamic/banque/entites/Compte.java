@@ -12,10 +12,10 @@ public class Compte {
 	  @Override
 	  
 	  public String toString() {
-		return "Compte{" +
+		return "Compte " +
 				"numero=" + numero +
-				", solde=" + solde +
-				'}';
+				", solde=" + solde 
+				;
 	  }
 	  
 
