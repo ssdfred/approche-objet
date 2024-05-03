@@ -10,6 +10,18 @@ public class Personne {
 	public AdressePostale adresse;
 	
 
+	public String getNom() {
+		return nom;
+	}
+	public String getPrénom() {
+		return prénom;
+	}
+	public void setPrénom(String prénom) {
+		this.prénom = prénom;
+	}
+	public AdressePostale getAdresse() {
+		return adresse;
+	}
 	public Personne (String nom, String prénom) {
 	this.nom = nom;
 	this.prénom = prénom;
@@ -21,25 +33,29 @@ public class Personne {
 		this.adresse = adresse;
 	}
 	public void afficher() {
-		System.out.println("BLUNK Fred");
+		System.out.println("je m'appelle " +nom.toLowerCase() + " " + prénom);
 	}
-	public void modifier(String nom) {
-		nom = this.nom;
+	public void setNom(String nom) {
+		this.nom = nom;
+		
 	}
-	public void modifierPrenom(String prenom) {
-		prenom = this.prénom;
+	public void setPrenom(String prénom) {
+		prénom = this.prénom;
+		
 	}
-	public void modifierAdresse(AdressePostale adresse) {
-		adresse = this.adresse;
+	public void setAdresse(AdressePostale adresse) {
+		this.adresse = adresse;
+		
 	}
-	public String aficherNom() {
+	public String aficherNom(String non) {
 		return nom;
 	}
-	public String aficherPrenom() {
+	public String getPrenom(String prénom) {
 		return prénom;
 	}
-	public AdressePostale aficherAdresse() {
+	public  AdressePostale aficherAdresse() {
 		return adresse;
+		
 	}
 	
 	}
