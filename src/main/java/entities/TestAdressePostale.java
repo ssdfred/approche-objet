@@ -14,6 +14,7 @@ public class TestAdressePostale {
 			cpt++;
 		}
 		System.out.println(cpt);
+		System.out.println(a2);
 	}
 	
 
