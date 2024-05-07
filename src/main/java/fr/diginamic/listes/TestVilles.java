@@ -14,12 +14,29 @@ public class TestVilles {
 
 		System.out.println(villes);
 		System.out.println("--------------");
+
+		// Affichage de la ville la plus peuplée avec un boucle indexée
+		Ville villePlusPeupleeIndexee = villes.get(0);// j'iniatialise ma variable avec la première ville
+		for (int i = 1; i < villes.size(); i++) { // j'itère sur les villes
+			if (villes.get(i).getNbHabitants() > villePlusPeupleeIndexee.getNbHabitants()) {
+				// si la ville actuelle est plus peuplee que la precedente on l'initialise
+				villePlusPeupleeIndexee = villes.get(i);
+			}
+			// sinon on ne fait rien 
+		}
+		System.out.println("La ville la plus peuplée est : " + villePlusPeupleeIndexee);
+		
+		System.out.println("--------------");
 		// Recherche et affichage de la ville la plus peuplée
 
 		Ville villePlusPeuplee = villes.get(0);
 		for (Ville ville : villes) {
 			if (ville.getNbHabitants() > villePlusPeuplee.getNbHabitants()) {
 				villePlusPeuplee = ville;
+			}
+			if (ville.getNbHabitants()>=100000) {
+				String nom = villePlusPeuplee.getNom();
+				villePlusPeuplee.setNom(nom.toUpperCase());
 			}
 		}
 		System.out.println("La ville la plus peuplée est : " + villePlusPeuplee);
